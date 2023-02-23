@@ -56,14 +56,15 @@ class _UploadFilesScreenState extends State<UploadFilesScreen> {
               },
               child: Center(
                 child: Container(
-                  /* height: 170,
-                  width: 170, */
+                  height: 320,
+                  width: 200,
                   decoration: BoxDecoration(
                       color: Colors.blue,
                       borderRadius: BorderRadius.circular(20)),
                   child: pdfFile != null
                       ? PDFView(
                           filePath: pdfFile!.path,
+                          fitEachPage: true,
                         )
                       /*  Image.file(
                           pdfFile!.absolute,
