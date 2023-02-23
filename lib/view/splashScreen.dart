@@ -1,8 +1,7 @@
 // ignore_for_file: file_names
 
 import 'dart:async';
-
-import 'package:complete_firbase/UploadImage/uploadImgScreen.dart';
+import 'package:complete_firbase/UploadImage/upload_file.dart';
 import 'package:complete_firbase/auth/signupScreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
     final user = auth.currentUser;
     if (user != null) {
       Timer(
-          const Duration(seconds: 2), () => Get.to(const UploadImageScreen()));
+          const Duration(seconds: 2), () => Get.to(const UploadFilesScreen()));
     } else {
       Timer(const Duration(seconds: 2), () => Get.to(const SignupScreen()));
     }
