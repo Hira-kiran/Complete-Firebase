@@ -1,5 +1,6 @@
 // ignore_for_file: file_names
 
+import 'package:complete_firbase/auth/forgortPassword.dart';
 import 'package:complete_firbase/phoneAuth/loginWithPhoneNo.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -66,6 +67,18 @@ class _SignupScreenState extends State<SignupScreen> {
                       return null;
                     },
                   ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Get.to(const ForgotPaswordScreen());
+                    },
+                    child: const Padding(
+                      padding: EdgeInsets.only(left: 210),
+                      child: Text("Forgot Password"),
+                    ),
+                  )
                 ],
               ),
             ),

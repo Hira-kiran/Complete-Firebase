@@ -2,12 +2,11 @@
 
 import 'dart:async';
 
+import 'package:complete_firbase/UploadImage/uploadImgScreen.dart';
 import 'package:complete_firbase/auth/signupScreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../Realtime_Database/postScreen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -23,7 +22,8 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     final user = auth.currentUser;
     if (user != null) {
-      Timer(const Duration(seconds: 2), () => Get.to(const PostScreen()));
+      Timer(
+          const Duration(seconds: 2), () => Get.to(const UploadImageScreen()));
     } else {
       Timer(const Duration(seconds: 2), () => Get.to(const SignupScreen()));
     }
